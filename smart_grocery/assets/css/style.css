@@ -1,0 +1,733 @@
+/* İÇERİK ALANI VE BUZLU CAM PANELLER */
+.main-content { 
+    flex: 1; 
+    padding: 40px; 
+}
+
+.content-panel, .eco-panel { 
+    background: rgba(255, 255, 255, 0.75) !important; 
+    backdrop-filter: blur(15px); 
+    border-radius: 40px !important; 
+    padding: 35px; 
+    border: 1px solid rgba(255,255,255,0.4); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05); 
+}
+
+
+/* Sayfa Düzeltme (Reset) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+
+/* Sayfanın Arka Planı ve Genel Düzen */
+body {
+    background-color: #f4f4f4;
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* SIDEBAR (Soldaki menü düzeni) 
+.sidebar { 
+    width: 280px; 
+    background: #fff; 
+    padding: 30px 20px; 
+    display: flex; 
+    flex-direction: column; 
+    box-shadow: 10px 0 30px rgba(0,0,0,0.03); 
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+*/
+
+/*.nav-item { 
+    display: flex; 
+    align-items: center; 
+    padding: 14px 20px; 
+    margin-bottom: 10px; 
+    color: #555; 
+    text-decoration: none; 
+    border-radius: 15px; 
+    transition: 0.3s; 
+}
+
+.nav-item:hover, .nav-item.active { 
+    background: #E8F5E9; 
+    color: var(--primary-green); 
+    font-weight: 600; 
+} */
+
+
+/* Başlık Stili */
+header {
+    background-color: #007bff; /* Mavi */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+/* Giriş Kutuları (input) Stili - Login/Register Sayfası İçin */
+input[type="text"], 
+input[type="password"], 
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* Giriş Kutularına Odaklanma (Focus) Efekti */
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Genel Buton Stili (Login/Register Butonları) */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Buton Üzerine Gelme (Hover) Efekti */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Bağlantılar (Login/Register Linkleri) Stili */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Stili */
+footer {
+    padding: 10px;
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+/* --- ANA SAYFA / NAVİGASYON STİLLERİ --- */
+
+/* Ana Navigasyon Çubuğu (Üst Menü) */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Stili */
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Navigasyon Linkleri Listesi */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Linkleri dikeyde ortala */
+    gap: 25px;
+}
+
+/* Navigasyon Linkleri */
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+/* ÇIKIŞ YAP BUTONU (Sizin İstediğiniz Kırmızı, Küçük Buton Formatı) */
+.logout-btn {
+    /* Favorilere Ekle formatını kullanıyoruz */
+    background-color: #dc3545; /* Kırmızı renk */
+    color: white;
+    font-weight: bold;
+    font-size: 14px !important; /* Diğer linklerden küçük font */
+    padding: 5px 10px; 
+    border-radius: 4px;
+    text-decoration: none; /* Alt çizgi olmasın */
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c82333; /* Daha koyu kırmızı */
+    color: white !important; /* Hover'da sarı olmasın, beyaz kalsın */
+    text-decoration: none;
+}
+
+/* Ana Sayfa İçeriği ve Arama Bölümü Stili */
+.home-main {
+    padding: 40px 20px;
+    flex-direction: column;
+}
+
+.search-section {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.search-bar-container {
+    display: flex;
+    gap: 10px;
+}
+
+#product_search {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.barcode-btn {
+    padding: 10px 15px;
+    white-space: nowrap;
+    background-color: #28a745;
+}
+
+.barcode-btn:hover {
+    background-color: #1e7e34;
+}
+
+/* --- ÜRÜN DETAY SAYFASI STİLLERİ --- */
+
+/* Ana İçerik */
+.detail-main {
+    justify-content: flex-start;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+/* Ürün Detay Kapsayıcısı */
+.product-detail-container {
+    display: flex;
+    gap: 30px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Ürün Görseli */
+.product-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+/* Ürün Bilgileri Bölümü */
+.product-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.product-info h2 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.product-info hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #eee;
+}
+
+/* Zorunlu: Düşük Stok Uyarısı Stili */
+.low-stock {
+    color: #dc3545;
+    font-weight: bold;
+    background-color: #f8d7da;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+/* Barkod Simülasyon Alanı */
+.barcode-simulation h3 {
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+.barcode-simulation input {
+    margin-bottom: 10px;
+}
+
+/* Adet ve Ekle Butonları Bölümü */
+.add-to-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#quantity {
+    width: 60px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.primary-btn {
+    /* Genel buton stilini kullanır (#007bff) */
+    background-color: #007bff; 
+}
+
+.favorite-btn {
+    background-color: #ffc107;
+    color: #333;
+    padding: 12px 15px;
+}
+
+.favorite-btn:hover {
+    background-color: #e0a800;
+}
+/* Karşılaştırma Sayfası Düzeni */
+.comparison-main {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center; /* Sayfa içeriğini merkezle */
+}
+
+.comparison-section {
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.comparison-section h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Bütçe Önerisi Mesajı */
+.budget-tip {
+    background-color: #d4edda; /* Açık yeşil arka plan */
+    color: #155724; /* Koyu yeşil yazı */
+    border: 1px solid #c3e6cb;
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* Karşılaştırma Tablosu Kapsayıcısı */
+.comparison-table-container {
+    overflow-x: auto; /* Küçük ekranlarda yatay kaydırma çubuğu sağlar */
+}
+
+/* Ana Tablo Stili */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse; /* Çift çizgileri kaldır */
+    text-align: left;
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.comparison-table thead th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* En Ucuz Fiyat Vurgusu (Hocanın dikkat edeceği yer) */
+.cheapest-price {
+    background-color: #e6ffec; /* Çok açık yeşil arka plan */
+    color: #28a745; /* Yeşil yazı */
+    font-weight: bold;
+}
+
+/* Toplam Satırları Stili */
+.total-row td {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* En İyi Toplam Sepet Satırı (Optimizasyon sonucu) */
+.total-best-row td {
+    background-color: #c9e6ff; /* Açık mavi arka plan */
+    font-weight: bold;
+    font-size: 18px;
+    color: #0056b3;
+}
+/* Alışveriş Listesi Sayfası Düzeni */
+.list-main {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shopping-list-container {
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.shopping-list-container h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Liste Özeti (Toplam Tutar vb.) */
+.list-summary {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+/* Liste Tablosu Stili */
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.list-table th, .list-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+.list-table thead th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+/* Adet Giriş Kutusu */
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Kaldır Butonu */
+.remove-btn {
+    background-color: #dc3545; /* Kırmızı */
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+/* Zorunlu: Düşük Stok Uyarısı ve Stokta Yok Stilleri */
+.low-stock-warning {
+    color: #ffc107; /* Sarımsı renk */
+    font-weight: bold;
+}
+
+.out-of-stock-warning {
+    color: #dc3545; /* Kırmızı renk */
+    font-weight: bold;
+    background-color: #f8d7da; /* Açık kırmızı arka plan */
+}
+
+/* Stokta Yok Satırı ve Pasif Görünüm */
+.list-item.out-of-stock td {
+    background-color: #f2f2f2;
+    opacity: 0.6;
+}
+
+/* Genel Toplam Satırı */
+.final-total-row td {
+    background-color: #c9e6ff;
+    font-weight: bold;
+    font-size: 18px;
+    color: #0056b3;
+}
+
+/* Liste Eylemleri (Tamamla Butonu) */
+.list-actions {
+    display: flex;
+    justify-content: flex-end; /* Sağ hizala */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.checkout-btn {
+    background-color: #28a745; /* Yeşil - Tamamla butonu */
+    padding: 15px 25px;
+    font-size: 18px;
+}
+
+.checkout-btn:hover {
+    background-color: #1e7e34;
+}
+
+.continue-shopping {
+    align-self: center; /* Butonla hizala */
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+/* Profil Sayfası Ana İçerik Düzeni */
+.profile-main {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-container {
+    max-width: 900px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.profile-container h2 {
+    color: #007bff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Kartlar İçin Genel Stil */
+.profile-info-card, .analytics-card, .favorites-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.profile-info-card h3, .analytics-card h3, .favorites-card h3 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Profil Bilgileri Kartı */
+.profile-info-card p {
+    margin-bottom: 10px;
+}
+
+.update-profile-btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Favori Ürün Listesi Stili */
+.favorite-list {
+    list-style-type: none;
+}
+
+.favorite-list li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #eee;
+}
+
+.favorite-list li:last-child {
+    border-bottom: none;
+}
+
+.favorite-list a {
+    color: #0056b3;
+}
+
+/* Analiz Kartı - Grafik Simülasyonu Stili */
+.analytics-card .description {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.chart-simulation {
+    display: flex;
+    align-items: flex-end; /* Çubukları alttan başlat */
+    height: 150px; /* Grafik yüksekliği */
+    gap: 10px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-left: 5px;
+}
+
+.chart-simulation .bar {
+    width: 20%;
+    max-width: 60px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 3px 3px 0 0;
+    transition: height 0.5s;
+    opacity: 0.8;
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #555;
+    margin-top: 5px;
+}
+/* Admin Sayfası Ana İçerik Düzeni */
+.admin-main {
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-dashboard {
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.admin-dashboard h2 {
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+/* Admin Kartları Kapsayıcısı (Grid Düzeni) */
+.admin-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Esnek kartlar */
+    gap: 20px;
+    text-align: left;
+}
+
+/* Yönetim Kartları Genel Stili */
+.admin-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-left: 5px solid #007bff; /* Mavi çizgi */
+    height: 100%;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px); /* Hafif yukarı kaydırma efekti */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.admin-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.admin-card p {
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 40px; /* Metin kısa olsa bile kart yüksekliğini koru */
+}
+
+/* Zorunlu Stok Yönetimi Kartı için Özel Stil */
+.stock-management {
+    border-left: 5px solid #dc3545; /* Kırmızı çizgi (Kritik uyarı) */
+}
+
+.stock-management .warning {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Admin Kart Butonları */
+.admin-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+/* Kritik Buton Stili (Stok Güncelleme) */
+.warning-btn {
+    background-color: #dc3545; /* Kırmızı Buton */
+}
+
+.warning-btn:hover {
+    background-color: #c82333;
+}
+
+/* İkincil Butonlar */
+.secondary-btn {
+    background-color: #6c757d;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
